@@ -7,16 +7,38 @@
 <body>
     <div class="search-box">
         <h2>Board of Intermediate and Secondary Education, Dhaka</h2>
-        <input type="text" id="roll" placeholder="Enter Roll Number" value="325531">
-        <input type="text" id="reg" placeholder="Enter Registration Number" value="1310384293/2019-20">
+        <input type="text" id="roll" placeholder="Enter Roll Number">
+        <input type="text" id="reg" placeholder="Enter Registration Number">
         <button onclick="showResult()">Search Result</button>
     </div>
 
-    <div id="result-display" style="display:block; margin-top: 20px;">
+    <div id="error-msg" style="color: red; margin-top: 10px; font-weight: bold;"></div>
+
+    <div id="result-display" style="display:none; margin-top: 20px;">
         <h3>Marksheet</h3>
-        <img src="marksheet.jpg" alt="Marksheet" style="width: 100%; max-width: 800px; margin-bottom: 20px;" onerror="this.onerror=null; this.src='marksheet.JPG';">
+        <img src="marksheet.jpg" alt="Marksheet" style="width: 100%; max-width: 800px; margin-bottom: 20px;">
         <h3>Certificate</h3>
-        <img src="certificate.jpg" alt="Certificate" style="width: 100%; max-width: 800px;" onerror="this.onerror=null; this.src='certificate.JPG';">
+        <img src="certificate.jpg" alt="Certificate" style="width: 100%; max-width: 800px;">
     </div>
+
+    <script>
+        function showResult() {
+            var rollInput = document.getElementById('roll').value.trim();
+            var regInput = document.getElementById('reg').value.trim();
+            var errorMsg = document.getElementById('error-msg');
+            var resultDisplay = document.getElementById('result-display');
+
+            var correctRoll = "325531";
+            var correctReg = "1310384293/2019-20";
+
+            if (rollInput === correctRoll && regInput === correctReg) {
+                errorMsg.innerHTML = "";
+                resultDisplay.style.display = 'block';
+            } else {
+                resultDisplay.style.display = 'none';
+                errorMsg.innerHTML = "Invalid Roll or Registration Number! Please enter correct details.";
+            }
+        }
+    </script>
 </body>
 </html>
