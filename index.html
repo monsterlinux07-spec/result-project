@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Education Board Result Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-box">
+        <h2>Board of Intermediate and Secondary Education, Dhaka</h2>
+        <input type="text" id="roll" placeholder="Enter Roll Number">
+        <input type="text" id="reg" placeholder="Enter Registration Number">
+        <button onclick="showResult()">Search Result</button>
+    </div>
+
+    <div id="result-display" style="display:none; margin-top: 20px;">
+        <img src="1000153408.jpg" alt="Marksheet" style="width: 100%; max-width: 800px;">
+    </div>
+
+    <script>
+        function showResult() {
+            document.getElementById('result-display').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
