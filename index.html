@@ -7,22 +7,16 @@
 <body>
     <div class="search-box">
         <h2>Board of Intermediate and Secondary Education, Dhaka</h2>
-        <input type="text" id="roll" placeholder="Enter Roll Number">
-        <input type="text" id="reg" placeholder="Enter Registration Number">
+        <input type="text" id="roll" placeholder="Enter Roll Number" value="325531">
+        <input type="text" id="reg" placeholder="Enter Registration Number" value="1310384293/2019-20">
         <button onclick="showResult()">Search Result</button>
     </div>
 
-    <div id="result-display" style="display:none; margin-top: 20px;">
+    <div id="result-display" style="display:block; margin-top: 20px;">
         <h3>Marksheet</h3>
-        <img src="marksheet.jpg" alt="Marksheet" style="width: 100%; max-width: 800px; margin-bottom: 20px;">
+        <img src="marksheet.jpg" alt="Marksheet" style="width: 100%; max-width: 800px; margin-bottom: 20px;" onerror="this.onerror=null; this.src='marksheet.JPG';">
         <h3>Certificate</h3>
-        <img src="certificate.jpg" alt="Certificate" style="width: 100%; max-width: 800px;">
+        <img src="certificate.jpg" alt="Certificate" style="width: 100%; max-width: 800px;" onerror="this.onerror=null; this.src='certificate.JPG';">
     </div>
-
-    <script>
-        function showResult() {
-            document.getElementById('result-display').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
